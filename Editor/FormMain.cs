@@ -589,21 +589,21 @@ namespace WalkerSim.Editor
 
         private void UpdateStats()
         {
-            lblStatTotalAgents.Text = simulation.AgentCount.ToString();
-            lblStatInactive.Text = (simulation.AgentCount - simulation.ActiveCount).ToString();
-            lblStatActive.Text = simulation.ActiveCount.ToString();
-            lblStatGroups.Text = simulation.GroupCount.ToString();
-            lblStatWindDir.Text = simulation.WindDirection.ToString();
-            lblStatWindTarget.Text = simulation.WindDirectionTarget.ToString();
-            lblStatWindChange.Text = simulation.TickNextWindChange.ToString();
-            lblStatTicks.Text = simulation.Ticks.ToString();
-            lblStatSimTime.Text = String.Format(
+            totalAgentsCount.Text = simulation.AgentCount.ToString();
+            inactiveAgentsCount.Text = (simulation.AgentCount - simulation.ActiveCount).ToString();
+            activeAgentsCount.Text = simulation.ActiveCount.ToString();
+            groupsStat.Text = simulation.GroupCount.ToString();
+            windDirStat.Text = simulation.WindDirection.ToString();
+            windDirTargetStat.Text = simulation.WindDirectionTarget.ToString();
+            nextWindChangeStat.Text = simulation.TickNextWindChange.ToString();
+            ticksCount.Text = simulation.Ticks.ToString();
+            simulationTimeStat.Text = String.Format(
                 "{0:0.00000} ms. ({1:0.000}/ps)",
                 simulation.AverageSimTime * 1000.0,
                 (simulation.AverageSimTime > 0 ? 1 / simulation.AverageSimTime : 0)
                 );
 
-            lblStatUpdateTime.Text = String.Format(
+            updateTimeStat.Text = String.Format(
                 "{0:0.00000} ms. ({1:0.000}/ps)",
                 simulation.AverageUpdateTime * 1000.0,
                 (simulation.AverageUpdateTime > 0 ? 1 / simulation.AverageUpdateTime : 0)
@@ -1000,22 +1000,22 @@ namespace WalkerSim.Editor
 
                     if (proc.Group == group.Group)
                     {
-                        lblAffectedGroup.ForeColor = Color.Red;
-                        SetToolTip(lblAffectedGroup, "There is another group with the same index, if you want to influence non-specific groups set it to 'Any'.");
+                        affectedGroupLabel.ForeColor = Color.Red;
+                        SetToolTip(affectedGroupLabel, "There is another group with the same index, if you want to influence non-specific groups set it to 'Any'.");
                         break;
                     }
                     else
                     {
-                        lblAffectedGroup.ForeColor = Color.Black;
-                        SetToolTip(lblAffectedGroup, null);
+                        affectedGroupLabel.ForeColor = Color.Black;
+                        SetToolTip(affectedGroupLabel, null);
                     }
                 }
             }
             else
             {
                 // Reset the color to default.
-                lblAffectedGroup.ForeColor = Color.Black;
-                SetToolTip(lblAffectedGroup, null);
+                affectedGroupLabel.ForeColor = Color.Black;
+                SetToolTip(affectedGroupLabel, null);
             }
         }
 
@@ -1051,7 +1051,7 @@ namespace WalkerSim.Editor
                 affected /= anyCount;
             }
 
-            lblAffected.Text = $"Affected agents: {affected}";
+            affectedAgentsLabel.Text = $"Affected agents: {affected}";
         }
 
         private void OnMovementSpeedChanged(object sender, EventArgs e)

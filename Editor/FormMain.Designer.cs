@@ -77,20 +77,20 @@ namespace WalkerSim.Editor
             splitContainer1 = new SplitContainer();
             simCanvas = new PictureBox();
             tabSimulation = new TabControl();
-            tabPage1 = new TabPage();
+            baseParametersTab = new TabPage();
             tableLayoutPanel1 = new TableLayoutPanel();
             lblPauseDuringBloodmoon = new WalkerSim.Editor.LabelWithHelp();
             lblStartAgentsGrouped = new WalkerSim.Editor.LabelWithHelp();
             inputSpawnProtectionTime = new NumericUpDown();
             panel1 = new Panel();
             inputRandomSeed = new NumericUpDown();
-            btRand = new Button();
+            randomSeedBtn = new Button();
             inputRespawnPosition = new ComboBox();
             lblSpawnProtectionTime = new WalkerSim.Editor.LabelWithHelp();
             lblRespawnPosition = new WalkerSim.Editor.LabelWithHelp();
             inputWorld = new ComboBox();
             inputStartPosition = new ComboBox();
-            label10 = new Label();
+            worldLabel = new Label();
             lblStartPosition = new WalkerSim.Editor.LabelWithHelp();
             lblRandomSeed = new Label();
             lblGroupSize = new WalkerSim.Editor.LabelWithHelp();
@@ -107,27 +107,27 @@ namespace WalkerSim.Editor
             inputSoundAware = new CheckBox();
             labelWithHelp1 = new WalkerSim.Editor.LabelWithHelp();
             inputSoundDistanceScale = new NumericUpDown();
-            tabPage2 = new TabPage();
+            movementSystemsTab = new TabPage();
             tableLayoutPanel2 = new TableLayoutPanel();
-            groupBox1 = new GroupBox();
+            systemsGroupBox1 = new GroupBox();
             tableLayoutPanel3 = new TableLayoutPanel();
             listProcessorGroups = new ListBox();
             tableLayoutPanel4 = new TableLayoutPanel();
-            button1 = new Button();
+            addGroupBtn = new Button();
             buttonRemoveGroup = new Button();
             buttonDuplicateGroup = new Button();
             groupProcessors = new GroupBox();
             tableLayoutPanel6 = new TableLayoutPanel();
             tableLayoutPanel7 = new TableLayoutPanel();
             tableLayoutPanel8 = new TableLayoutPanel();
-            button4 = new Button();
+            addMovementProcessorBtn = new Button();
             buttonRemoveProcessor = new Button();
             listProcessors = new ListBox();
             groupParameter = new GroupBox();
             tableLayoutPanel9 = new TableLayoutPanel();
             inputProcessorPower = new NumericUpDown();
             label9 = new Label();
-            label8 = new Label();
+            powerLabel = new Label();
             inputProcessorDistance = new NumericUpDown();
             groupProps = new GroupBox();
             tableLayoutPanel5 = new TableLayoutPanel();
@@ -137,34 +137,34 @@ namespace WalkerSim.Editor
             inputPostSpawnBehavior = new ComboBox();
             inputAffectedGroup = new ComboBox();
             lblPostSpawnWanderSpeed = new WalkerSim.Editor.LabelWithHelp();
-            lblMovementSpeed = new WalkerSim.Editor.LabelWithHelp();
+            movementSpeedText = new WalkerSim.Editor.LabelWithHelp();
             inputMovementSpeed = new NumericUpDown();
-            lblAffected = new Label();
-            lblGroupColor = new WalkerSim.Editor.LabelWithHelp();
-            lblPostSpawnBehavior = new WalkerSim.Editor.LabelWithHelp();
+            affectedAgentsLabel = new Label();
+            groupColorLabel = new WalkerSim.Editor.LabelWithHelp();
+            postSpawnBehaviorLabel = new WalkerSim.Editor.LabelWithHelp();
             inputWanderSpeed = new ComboBox();
-            lblAffectedGroup = new WalkerSim.Editor.LabelWithHelp();
-            tabPage4 = new TabPage();
-            lblStatGroups = new Label();
-            label24 = new Label();
-            lblStatUpdateTime = new Label();
-            label22 = new Label();
-            lblStatWindTarget = new Label();
-            label20 = new Label();
-            lblStatSimTime = new Label();
-            label27 = new Label();
-            lblStatWindChange = new Label();
-            label25 = new Label();
-            lblStatWindDir = new Label();
-            label23 = new Label();
-            lblStatTicks = new Label();
-            label21 = new Label();
-            lblStatActive = new Label();
-            label19 = new Label();
-            lblStatInactive = new Label();
-            label17 = new Label();
-            lblStatTotalAgents = new Label();
-            label16 = new Label();
+            affectedGroupLabel = new WalkerSim.Editor.LabelWithHelp();
+            statisticsTab = new TabPage();
+            groupsStat = new Label();
+            groupsLabel = new Label();
+            updateTimeStat = new Label();
+            updateTimeText = new Label();
+            windDirTargetStat = new Label();
+            windDirTargetText = new Label();
+            simulationTimeStat = new Label();
+            simulationTimeLabel = new Label();
+            nextWindChangeStat = new Label();
+            nextWindChangeLabel = new Label();
+            windDirStat = new Label();
+            windDirText = new Label();
+            ticksCount = new Label();
+            ticksText = new Label();
+            activeAgentsCount = new Label();
+            activeAgentsLabel = new Label();
+            inactiveAgentsCount = new Label();
+            inactiveAgentsLabel = new Label();
+            totalAgentsCount = new Label();
+            totalAgentsLabel = new Label();
             tabPage3 = new TabPage();
             rtbLog = new RichTextBox();
             contextLog = new ContextMenuStrip(components);
@@ -172,9 +172,9 @@ namespace WalkerSim.Editor
             copyToolStripMenuItem = new ToolStripMenuItem();
             colorPickerDlg = new ColorDialog();
             toolTipGroupSize = new ToolTip(components);
-            btZoomIn = new Label();
-            btZoomOut = new Label();
-            label29 = new Label();
+            zoomInBtn = new Label();
+            zoomOutBtn = new Label();
+            zoomResetBtn = new Label();
             menuStrip1.SuspendLayout();
             ((ISupportInitialize)(splitContainer1)).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
@@ -182,7 +182,7 @@ namespace WalkerSim.Editor
             splitContainer1.SuspendLayout();
             ((ISupportInitialize)(simCanvas)).BeginInit();
             tabSimulation.SuspendLayout();
-            tabPage1.SuspendLayout();
+            baseParametersTab.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             ((ISupportInitialize)(inputSpawnProtectionTime)).BeginInit();
             panel1.SuspendLayout();
@@ -191,9 +191,9 @@ namespace WalkerSim.Editor
             ((ISupportInitialize)(inputMaxAgents)).BeginInit();
             ((ISupportInitialize)(inputActivationRadius)).BeginInit();
             ((ISupportInitialize)(inputSoundDistanceScale)).BeginInit();
-            tabPage2.SuspendLayout();
+            movementSystemsTab.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
-            groupBox1.SuspendLayout();
+            systemsGroupBox1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             groupProcessors.SuspendLayout();
@@ -209,7 +209,7 @@ namespace WalkerSim.Editor
             panel2.SuspendLayout();
             ((ISupportInitialize)(boxGroupColor)).BeginInit();
             ((ISupportInitialize)(inputMovementSpeed)).BeginInit();
-            tabPage4.SuspendLayout();
+            statisticsTab.SuspendLayout();
             tabPage3.SuspendLayout();
             contextLog.SuspendLayout();
             SuspendLayout();
@@ -451,7 +451,7 @@ namespace WalkerSim.Editor
             // 
             pauseToolStripMenuItem.Enabled = false;
             pauseToolStripMenuItem.Name = "pauseToolStripMenuItem";
-            pauseToolStripMenuItem.ShortcutKeys = ((Keys)(((Keys.Control | Keys.Alt) 
+            pauseToolStripMenuItem.ShortcutKeys = ((Keys)(((Keys.Control | Keys.Alt)
             | Keys.Pause)));
             pauseToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             pauseToolStripMenuItem.Text = "Pause";
@@ -575,9 +575,9 @@ namespace WalkerSim.Editor
             // 
             // tabSimulation
             // 
-            tabSimulation.Controls.Add(tabPage1);
-            tabSimulation.Controls.Add(tabPage2);
-            tabSimulation.Controls.Add(tabPage4);
+            tabSimulation.Controls.Add(baseParametersTab);
+            tabSimulation.Controls.Add(movementSystemsTab);
+            tabSimulation.Controls.Add(statisticsTab);
             tabSimulation.Controls.Add(tabPage3);
             tabSimulation.Dock = DockStyle.Fill;
             tabSimulation.Location = new System.Drawing.Point(0, 0);
@@ -588,14 +588,14 @@ namespace WalkerSim.Editor
             // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(tableLayoutPanel1);
-            tabPage1.Location = new System.Drawing.Point(4, 22);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new System.Drawing.Size(832, 201);
-            tabPage1.TabIndex = 0;
-            tabPage1.Text = "Base Parameters";
-            tabPage1.UseVisualStyleBackColor = true;
+            baseParametersTab.Controls.Add(tableLayoutPanel1);
+            baseParametersTab.Location = new System.Drawing.Point(4, 22);
+            baseParametersTab.Name = "tabPage1";
+            baseParametersTab.Padding = new Padding(3);
+            baseParametersTab.Size = new System.Drawing.Size(832, 201);
+            baseParametersTab.TabIndex = 0;
+            baseParametersTab.Text = "Base Parameters";
+            baseParametersTab.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
@@ -617,7 +617,7 @@ namespace WalkerSim.Editor
             tableLayoutPanel1.Controls.Add(lblRespawnPosition, 2, 2);
             tableLayoutPanel1.Controls.Add(inputWorld, 1, 1);
             tableLayoutPanel1.Controls.Add(inputStartPosition, 3, 1);
-            tableLayoutPanel1.Controls.Add(label10, 0, 1);
+            tableLayoutPanel1.Controls.Add(worldLabel, 0, 1);
             tableLayoutPanel1.Controls.Add(lblStartPosition, 2, 1);
             tableLayoutPanel1.Controls.Add(lblRandomSeed, 0, 2);
             tableLayoutPanel1.Controls.Add(lblGroupSize, 0, 3);
@@ -701,11 +701,11 @@ namespace WalkerSim.Editor
             // 
             // panel1
             // 
-            panel1.Anchor = ((AnchorStyles)(((AnchorStyles.Top | AnchorStyles.Left) 
+            panel1.Anchor = ((AnchorStyles)(((AnchorStyles.Top | AnchorStyles.Left)
             | AnchorStyles.Right)));
             panel1.AutoSize = true;
             panel1.Controls.Add(inputRandomSeed);
-            panel1.Controls.Add(btRand);
+            panel1.Controls.Add(randomSeedBtn);
             panel1.Location = new System.Drawing.Point(162, 35);
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
@@ -729,16 +729,16 @@ namespace WalkerSim.Editor
             // 
             // btRand
             // 
-            btRand.AutoSize = true;
-            btRand.Dock = DockStyle.Right;
-            btRand.Location = new System.Drawing.Point(87, 0);
-            btRand.Margin = new Padding(0);
-            btRand.Name = "btRand";
-            btRand.Size = new System.Drawing.Size(25, 20);
-            btRand.TabIndex = 43;
-            btRand.Text = "R";
-            btRand.UseVisualStyleBackColor = true;
-            btRand.Click += new System.EventHandler(OnRandSeedClick);
+            randomSeedBtn.AutoSize = true;
+            randomSeedBtn.Dock = DockStyle.Right;
+            randomSeedBtn.Location = new System.Drawing.Point(87, 0);
+            randomSeedBtn.Margin = new Padding(0);
+            randomSeedBtn.Name = "btRand";
+            randomSeedBtn.Size = new System.Drawing.Size(25, 20);
+            randomSeedBtn.TabIndex = 43;
+            randomSeedBtn.Text = "R";
+            randomSeedBtn.UseVisualStyleBackColor = true;
+            randomSeedBtn.Click += new System.EventHandler(OnRandSeedClick);
             // 
             // inputRespawnPosition
             // 
@@ -804,15 +804,15 @@ namespace WalkerSim.Editor
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Dock = DockStyle.Fill;
-            label10.Location = new System.Drawing.Point(0, 5);
-            label10.Margin = new Padding(0);
-            label10.Name = "label10";
-            label10.Padding = new Padding(0, 2, 0, 0);
-            label10.Size = new System.Drawing.Size(162, 30);
-            label10.TabIndex = 40;
-            label10.Text = "World";
+            worldLabel.AutoSize = true;
+            worldLabel.Dock = DockStyle.Fill;
+            worldLabel.Location = new System.Drawing.Point(0, 5);
+            worldLabel.Margin = new Padding(0);
+            worldLabel.Name = "label10";
+            worldLabel.Padding = new Padding(0, 2, 0, 0);
+            worldLabel.Size = new System.Drawing.Size(162, 30);
+            worldLabel.TabIndex = 40;
+            worldLabel.Text = "World";
 
             // 
             // lblStartPosition
@@ -1066,14 +1066,14 @@ namespace WalkerSim.Editor
             // 
             // tabPage2
             // 
-            tabPage2.Controls.Add(tableLayoutPanel2);
-            tabPage2.Location = new System.Drawing.Point(4, 22);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new System.Drawing.Size(832, 201);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Movement Systems";
-            tabPage2.UseVisualStyleBackColor = true;
+            movementSystemsTab.Controls.Add(tableLayoutPanel2);
+            movementSystemsTab.Location = new System.Drawing.Point(4, 22);
+            movementSystemsTab.Name = "tabPage2";
+            movementSystemsTab.Padding = new Padding(3);
+            movementSystemsTab.Size = new System.Drawing.Size(832, 201);
+            movementSystemsTab.TabIndex = 1;
+            movementSystemsTab.Text = "Movement Systems";
+            movementSystemsTab.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel2
             // 
@@ -1081,7 +1081,7 @@ namespace WalkerSim.Editor
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 27.18447F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.98058F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 38.83495F));
-            tableLayoutPanel2.Controls.Add(groupBox1, 0, 0);
+            tableLayoutPanel2.Controls.Add(systemsGroupBox1, 0, 0);
             tableLayoutPanel2.Controls.Add(groupProcessors, 2, 0);
             tableLayoutPanel2.Controls.Add(groupProps, 1, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
@@ -1094,15 +1094,15 @@ namespace WalkerSim.Editor
             // 
             // groupBox1
             // 
-            groupBox1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            groupBox1.Controls.Add(tableLayoutPanel3);
-            groupBox1.Dock = DockStyle.Fill;
-            groupBox1.Location = new System.Drawing.Point(3, 3);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new System.Drawing.Size(218, 189);
-            groupBox1.TabIndex = 8;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Systems";
+            systemsGroupBox1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            systemsGroupBox1.Controls.Add(tableLayoutPanel3);
+            systemsGroupBox1.Dock = DockStyle.Fill;
+            systemsGroupBox1.Location = new System.Drawing.Point(3, 3);
+            systemsGroupBox1.Name = "groupBox1";
+            systemsGroupBox1.Size = new System.Drawing.Size(218, 189);
+            systemsGroupBox1.TabIndex = 8;
+            systemsGroupBox1.TabStop = false;
+            systemsGroupBox1.Text = "Systems";
             // 
             // tableLayoutPanel3
             // 
@@ -1136,7 +1136,7 @@ namespace WalkerSim.Editor
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33333F));
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33334F));
             tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 33.33334F));
-            tableLayoutPanel4.Controls.Add(button1, 0, 0);
+            tableLayoutPanel4.Controls.Add(addGroupBtn, 0, 0);
             tableLayoutPanel4.Controls.Add(buttonRemoveGroup, 2, 0);
             tableLayoutPanel4.Controls.Add(buttonDuplicateGroup, 1, 0);
             tableLayoutPanel4.Dock = DockStyle.Fill;
@@ -1150,14 +1150,14 @@ namespace WalkerSim.Editor
             // 
             // button1
             // 
-            button1.Dock = DockStyle.Fill;
-            button1.Location = new System.Drawing.Point(3, 3);
-            button1.Name = "button1";
-            button1.Size = new System.Drawing.Size(64, 26);
-            button1.TabIndex = 9;
-            button1.Text = "Add";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += new System.EventHandler(OnAddGroupClick);
+            addGroupBtn.Dock = DockStyle.Fill;
+            addGroupBtn.Location = new System.Drawing.Point(3, 3);
+            addGroupBtn.Name = "button1";
+            addGroupBtn.Size = new System.Drawing.Size(64, 26);
+            addGroupBtn.TabIndex = 9;
+            addGroupBtn.Text = "Add";
+            addGroupBtn.UseVisualStyleBackColor = true;
+            addGroupBtn.Click += new System.EventHandler(OnAddGroupClick);
             // 
             // buttonRemoveGroup
             // 
@@ -1231,7 +1231,7 @@ namespace WalkerSim.Editor
             tableLayoutPanel8.ColumnCount = 2;
             tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel8.Controls.Add(button4, 0, 0);
+            tableLayoutPanel8.Controls.Add(addMovementProcessorBtn, 0, 0);
             tableLayoutPanel8.Controls.Add(buttonRemoveProcessor, 1, 0);
             tableLayoutPanel8.Dock = DockStyle.Fill;
             tableLayoutPanel8.Location = new System.Drawing.Point(0, 132);
@@ -1244,14 +1244,14 @@ namespace WalkerSim.Editor
             // 
             // button4
             // 
-            button4.Dock = DockStyle.Fill;
-            button4.Location = new System.Drawing.Point(3, 3);
-            button4.Name = "button4";
-            button4.Size = new System.Drawing.Size(70, 26);
-            button4.TabIndex = 8;
-            button4.Text = "Add";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += new System.EventHandler(OnAddProcessorClick);
+            addMovementProcessorBtn.Dock = DockStyle.Fill;
+            addMovementProcessorBtn.Location = new System.Drawing.Point(3, 3);
+            addMovementProcessorBtn.Name = "button4";
+            addMovementProcessorBtn.Size = new System.Drawing.Size(70, 26);
+            addMovementProcessorBtn.TabIndex = 8;
+            addMovementProcessorBtn.Text = "Add";
+            addMovementProcessorBtn.UseVisualStyleBackColor = true;
+            addMovementProcessorBtn.Click += new System.EventHandler(OnAddProcessorClick);
             // 
             // buttonRemoveProcessor
             // 
@@ -1296,7 +1296,7 @@ namespace WalkerSim.Editor
             tableLayoutPanel9.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel9.Controls.Add(inputProcessorPower, 1, 1);
             tableLayoutPanel9.Controls.Add(label9, 0, 0);
-            tableLayoutPanel9.Controls.Add(label8, 0, 1);
+            tableLayoutPanel9.Controls.Add(powerLabel, 0, 1);
             tableLayoutPanel9.Controls.Add(inputProcessorDistance, 1, 0);
             tableLayoutPanel9.Dock = DockStyle.Fill;
             tableLayoutPanel9.Location = new System.Drawing.Point(3, 16);
@@ -1343,13 +1343,13 @@ namespace WalkerSim.Editor
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Location = new System.Drawing.Point(3, 34);
-            label8.Margin = new Padding(3, 8, 3, 3);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(37, 13);
-            label8.TabIndex = 10;
-            label8.Text = "Power";
+            powerLabel.AutoSize = true;
+            powerLabel.Location = new System.Drawing.Point(3, 34);
+            powerLabel.Margin = new Padding(3, 8, 3, 3);
+            powerLabel.Name = "label8";
+            powerLabel.Size = new System.Drawing.Size(37, 13);
+            powerLabel.TabIndex = 10;
+            powerLabel.Text = "Power";
             // 
             // inputProcessorDistance
             // 
@@ -1391,13 +1391,13 @@ namespace WalkerSim.Editor
             tableLayoutPanel5.Controls.Add(inputPostSpawnBehavior, 1, 3);
             tableLayoutPanel5.Controls.Add(inputAffectedGroup, 1, 0);
             tableLayoutPanel5.Controls.Add(lblPostSpawnWanderSpeed, 0, 4);
-            tableLayoutPanel5.Controls.Add(lblMovementSpeed, 0, 1);
+            tableLayoutPanel5.Controls.Add(movementSpeedText, 0, 1);
             tableLayoutPanel5.Controls.Add(inputMovementSpeed, 1, 1);
-            tableLayoutPanel5.Controls.Add(lblAffected, 0, 5);
-            tableLayoutPanel5.Controls.Add(lblGroupColor, 0, 2);
-            tableLayoutPanel5.Controls.Add(lblPostSpawnBehavior, 0, 3);
+            tableLayoutPanel5.Controls.Add(affectedAgentsLabel, 0, 5);
+            tableLayoutPanel5.Controls.Add(groupColorLabel, 0, 2);
+            tableLayoutPanel5.Controls.Add(postSpawnBehaviorLabel, 0, 3);
             tableLayoutPanel5.Controls.Add(inputWanderSpeed, 1, 4);
-            tableLayoutPanel5.Controls.Add(lblAffectedGroup, 0, 0);
+            tableLayoutPanel5.Controls.Add(affectedGroupLabel, 0, 0);
             tableLayoutPanel5.Dock = DockStyle.Fill;
             tableLayoutPanel5.Location = new System.Drawing.Point(3, 16);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -1476,16 +1476,16 @@ namespace WalkerSim.Editor
             // 
             // lblMovementSpeed
             // 
-            lblMovementSpeed.AutoSize = true;
-            lblMovementSpeed.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            lblMovementSpeed.HelpUrl = null;
-            lblMovementSpeed.LabelText = "Movement Speed";
-            lblMovementSpeed.Location = new System.Drawing.Point(3, 35);
-            lblMovementSpeed.Margin = new Padding(3, 8, 3, 3);
-            lblMovementSpeed.Name = "lblMovementSpeed";
-            lblMovementSpeed.Padding = new Padding(4, 0, 0, 2);
-            lblMovementSpeed.Size = new System.Drawing.Size(95, 15);
-            lblMovementSpeed.TabIndex = 2;
+            movementSpeedText.AutoSize = true;
+            movementSpeedText.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            movementSpeedText.HelpUrl = null;
+            movementSpeedText.LabelText = "Movement Speed";
+            movementSpeedText.Location = new System.Drawing.Point(3, 35);
+            movementSpeedText.Margin = new Padding(3, 8, 3, 3);
+            movementSpeedText.Name = "lblMovementSpeed";
+            movementSpeedText.Padding = new Padding(4, 0, 0, 2);
+            movementSpeedText.Size = new System.Drawing.Size(95, 15);
+            movementSpeedText.TabIndex = 2;
             // 
             // inputMovementSpeed
             // 
@@ -1513,39 +1513,39 @@ namespace WalkerSim.Editor
             // 
             // lblAffected
             // 
-            lblAffected.AutoSize = true;
-            lblAffected.Location = new System.Drawing.Point(7, 143);
-            lblAffected.Margin = new Padding(7, 8, 3, 0);
-            lblAffected.Name = "lblAffected";
-            lblAffected.Size = new System.Drawing.Size(95, 13);
-            lblAffected.TabIndex = 9;
-            lblAffected.Text = "Affected Agents: 0";
+            affectedAgentsLabel.AutoSize = true;
+            affectedAgentsLabel.Location = new System.Drawing.Point(7, 143);
+            affectedAgentsLabel.Margin = new Padding(7, 8, 3, 0);
+            affectedAgentsLabel.Name = "lblAffected";
+            affectedAgentsLabel.Size = new System.Drawing.Size(95, 13);
+            affectedAgentsLabel.TabIndex = 9;
+            affectedAgentsLabel.Text = "Affected Agents: 0";
             // 
             // lblGroupColor
             // 
-            lblGroupColor.AutoSize = true;
-            lblGroupColor.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            lblGroupColor.HelpUrl = null;
-            lblGroupColor.LabelText = "Group Color";
-            lblGroupColor.Location = new System.Drawing.Point(3, 61);
-            lblGroupColor.Margin = new Padding(3, 8, 3, 3);
-            lblGroupColor.Name = "lblGroupColor";
-            lblGroupColor.Padding = new Padding(4, 0, 0, 2);
-            lblGroupColor.Size = new System.Drawing.Size(67, 15);
-            lblGroupColor.TabIndex = 6;
+            groupColorLabel.AutoSize = true;
+            groupColorLabel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupColorLabel.HelpUrl = null;
+            groupColorLabel.LabelText = "Group Color";
+            groupColorLabel.Location = new System.Drawing.Point(3, 61);
+            groupColorLabel.Margin = new Padding(3, 8, 3, 3);
+            groupColorLabel.Name = "lblGroupColor";
+            groupColorLabel.Padding = new Padding(4, 0, 0, 2);
+            groupColorLabel.Size = new System.Drawing.Size(67, 15);
+            groupColorLabel.TabIndex = 6;
             // 
             // lblPostSpawnBehavior
             // 
-            lblPostSpawnBehavior.AutoSize = true;
-            lblPostSpawnBehavior.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            lblPostSpawnBehavior.HelpUrl = null;
-            lblPostSpawnBehavior.LabelText = "Post Spawn Behavior";
-            lblPostSpawnBehavior.Location = new System.Drawing.Point(3, 89);
-            lblPostSpawnBehavior.Margin = new Padding(3, 8, 3, 3);
-            lblPostSpawnBehavior.Name = "lblPostSpawnBehavior";
-            lblPostSpawnBehavior.Padding = new Padding(4, 0, 0, 2);
-            lblPostSpawnBehavior.Size = new System.Drawing.Size(113, 15);
-            lblPostSpawnBehavior.TabIndex = 10;
+            postSpawnBehaviorLabel.AutoSize = true;
+            postSpawnBehaviorLabel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            postSpawnBehaviorLabel.HelpUrl = null;
+            postSpawnBehaviorLabel.LabelText = "Post Spawn Behavior";
+            postSpawnBehaviorLabel.Location = new System.Drawing.Point(3, 89);
+            postSpawnBehaviorLabel.Margin = new Padding(3, 8, 3, 3);
+            postSpawnBehaviorLabel.Name = "lblPostSpawnBehavior";
+            postSpawnBehaviorLabel.Padding = new Padding(4, 0, 0, 2);
+            postSpawnBehaviorLabel.Size = new System.Drawing.Size(113, 15);
+            postSpawnBehaviorLabel.TabIndex = 10;
             // 
             // inputWanderSpeed
             // 
@@ -1566,276 +1566,276 @@ namespace WalkerSim.Editor
             // 
             // lblAffectedGroup
             // 
-            lblAffectedGroup.AutoSize = true;
-            lblAffectedGroup.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            lblAffectedGroup.HelpUrl = null;
-            lblAffectedGroup.LabelText = "Affected Group";
-            lblAffectedGroup.Location = new System.Drawing.Point(3, 8);
-            lblAffectedGroup.Margin = new Padding(3, 8, 3, 3);
-            lblAffectedGroup.Name = "lblAffectedGroup";
-            lblAffectedGroup.Padding = new Padding(4, 0, 0, 2);
-            lblAffectedGroup.Size = new System.Drawing.Size(83, 15);
-            lblAffectedGroup.TabIndex = 17;
+            affectedGroupLabel.AutoSize = true;
+            affectedGroupLabel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            affectedGroupLabel.HelpUrl = null;
+            affectedGroupLabel.LabelText = "Affected Group";
+            affectedGroupLabel.Location = new System.Drawing.Point(3, 8);
+            affectedGroupLabel.Margin = new Padding(3, 8, 3, 3);
+            affectedGroupLabel.Name = "lblAffectedGroup";
+            affectedGroupLabel.Padding = new Padding(4, 0, 0, 2);
+            affectedGroupLabel.Size = new System.Drawing.Size(83, 15);
+            affectedGroupLabel.TabIndex = 17;
             // 
             // tabPage4
             // 
-            tabPage4.Controls.Add(lblStatGroups);
-            tabPage4.Controls.Add(label24);
-            tabPage4.Controls.Add(lblStatUpdateTime);
-            tabPage4.Controls.Add(label22);
-            tabPage4.Controls.Add(lblStatWindTarget);
-            tabPage4.Controls.Add(label20);
-            tabPage4.Controls.Add(lblStatSimTime);
-            tabPage4.Controls.Add(label27);
-            tabPage4.Controls.Add(lblStatWindChange);
-            tabPage4.Controls.Add(label25);
-            tabPage4.Controls.Add(lblStatWindDir);
-            tabPage4.Controls.Add(label23);
-            tabPage4.Controls.Add(lblStatTicks);
-            tabPage4.Controls.Add(label21);
-            tabPage4.Controls.Add(lblStatActive);
-            tabPage4.Controls.Add(label19);
-            tabPage4.Controls.Add(lblStatInactive);
-            tabPage4.Controls.Add(label17);
-            tabPage4.Controls.Add(lblStatTotalAgents);
-            tabPage4.Controls.Add(label16);
-            tabPage4.Location = new System.Drawing.Point(4, 22);
-            tabPage4.Name = "tabPage4";
-            tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new System.Drawing.Size(832, 201);
-            tabPage4.TabIndex = 3;
-            tabPage4.Text = "Statistics";
-            tabPage4.UseVisualStyleBackColor = true;
+            statisticsTab.Controls.Add(groupsStat);
+            statisticsTab.Controls.Add(groupsLabel);
+            statisticsTab.Controls.Add(updateTimeStat);
+            statisticsTab.Controls.Add(updateTimeText);
+            statisticsTab.Controls.Add(windDirTargetStat);
+            statisticsTab.Controls.Add(windDirTargetText);
+            statisticsTab.Controls.Add(simulationTimeStat);
+            statisticsTab.Controls.Add(simulationTimeLabel);
+            statisticsTab.Controls.Add(nextWindChangeStat);
+            statisticsTab.Controls.Add(nextWindChangeLabel);
+            statisticsTab.Controls.Add(windDirStat);
+            statisticsTab.Controls.Add(windDirText);
+            statisticsTab.Controls.Add(ticksCount);
+            statisticsTab.Controls.Add(ticksText);
+            statisticsTab.Controls.Add(activeAgentsCount);
+            statisticsTab.Controls.Add(activeAgentsLabel);
+            statisticsTab.Controls.Add(inactiveAgentsCount);
+            statisticsTab.Controls.Add(inactiveAgentsLabel);
+            statisticsTab.Controls.Add(totalAgentsCount);
+            statisticsTab.Controls.Add(totalAgentsLabel);
+            statisticsTab.Location = new System.Drawing.Point(4, 22);
+            statisticsTab.Name = "tabPage4";
+            statisticsTab.Padding = new Padding(3);
+            statisticsTab.Size = new System.Drawing.Size(832, 201);
+            statisticsTab.TabIndex = 3;
+            statisticsTab.Text = "Statistics";
+            statisticsTab.UseVisualStyleBackColor = true;
             // 
             // lblStatGroups
             // 
-            lblStatGroups.AutoSize = true;
-            lblStatGroups.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            lblStatGroups.Location = new System.Drawing.Point(126, 60);
-            lblStatGroups.Margin = new Padding(5, 0, 5, 0);
-            lblStatGroups.Name = "lblStatGroups";
-            lblStatGroups.Padding = new Padding(2);
-            lblStatGroups.Size = new System.Drawing.Size(17, 17);
-            lblStatGroups.TabIndex = 19;
-            lblStatGroups.Text = "0";
+            groupsStat.AutoSize = true;
+            groupsStat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            groupsStat.Location = new System.Drawing.Point(126, 60);
+            groupsStat.Margin = new Padding(5, 0, 5, 0);
+            groupsStat.Name = "lblStatGroups";
+            groupsStat.Padding = new Padding(2);
+            groupsStat.Size = new System.Drawing.Size(17, 17);
+            groupsStat.TabIndex = 19;
+            groupsStat.Text = "0";
             // 
             // label24
             // 
-            label24.AutoSize = true;
-            label24.Location = new System.Drawing.Point(10, 60);
-            label24.Margin = new Padding(5, 0, 5, 0);
-            label24.Name = "label24";
-            label24.Padding = new Padding(2);
-            label24.Size = new System.Drawing.Size(48, 17);
-            label24.TabIndex = 18;
-            label24.Text = "Groups:";
+            groupsLabel.AutoSize = true;
+            groupsLabel.Location = new System.Drawing.Point(10, 60);
+            groupsLabel.Margin = new Padding(5, 0, 5, 0);
+            groupsLabel.Name = "label24";
+            groupsLabel.Padding = new Padding(2);
+            groupsLabel.Size = new System.Drawing.Size(48, 17);
+            groupsLabel.TabIndex = 18;
+            groupsLabel.Text = "Groups:";
             // 
             // lblStatUpdateTime
             // 
-            lblStatUpdateTime.AutoSize = true;
-            lblStatUpdateTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            lblStatUpdateTime.Location = new System.Drawing.Point(622, 43);
-            lblStatUpdateTime.Margin = new Padding(5, 0, 5, 0);
-            lblStatUpdateTime.Name = "lblStatUpdateTime";
-            lblStatUpdateTime.Padding = new Padding(2);
-            lblStatUpdateTime.Size = new System.Drawing.Size(33, 17);
-            lblStatUpdateTime.TabIndex = 17;
-            lblStatUpdateTime.Text = "0 ms";
+            updateTimeStat.AutoSize = true;
+            updateTimeStat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            updateTimeStat.Location = new System.Drawing.Point(622, 43);
+            updateTimeStat.Margin = new Padding(5, 0, 5, 0);
+            updateTimeStat.Name = "lblStatUpdateTime";
+            updateTimeStat.Padding = new Padding(2);
+            updateTimeStat.Size = new System.Drawing.Size(33, 17);
+            updateTimeStat.TabIndex = 17;
+            updateTimeStat.Text = "0 ms";
             // 
             // label22
             // 
-            label22.AutoSize = true;
-            label22.Location = new System.Drawing.Point(522, 43);
-            label22.Margin = new Padding(5, 0, 5, 0);
-            label22.Name = "label22";
-            label22.Padding = new Padding(2);
-            label22.Size = new System.Drawing.Size(75, 17);
-            label22.TabIndex = 16;
-            label22.Text = "Update Time:";
+            updateTimeText.AutoSize = true;
+            updateTimeText.Location = new System.Drawing.Point(522, 43);
+            updateTimeText.Margin = new Padding(5, 0, 5, 0);
+            updateTimeText.Name = "label22";
+            updateTimeText.Padding = new Padding(2);
+            updateTimeText.Size = new System.Drawing.Size(75, 17);
+            updateTimeText.TabIndex = 16;
+            updateTimeText.Text = "Update Time:";
             // 
             // lblStatWindTarget
             // 
-            lblStatWindTarget.AutoSize = true;
-            lblStatWindTarget.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            lblStatWindTarget.Location = new System.Drawing.Point(352, 9);
-            lblStatWindTarget.Margin = new Padding(5, 0, 5, 0);
-            lblStatWindTarget.Name = "lblStatWindTarget";
-            lblStatWindTarget.Padding = new Padding(2);
-            lblStatWindTarget.Size = new System.Drawing.Size(26, 17);
-            lblStatWindTarget.TabIndex = 15;
-            lblStatWindTarget.Text = "0 0";
+            windDirTargetStat.AutoSize = true;
+            windDirTargetStat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            windDirTargetStat.Location = new System.Drawing.Point(352, 9);
+            windDirTargetStat.Margin = new Padding(5, 0, 5, 0);
+            windDirTargetStat.Name = "lblStatWindTarget";
+            windDirTargetStat.Padding = new Padding(2);
+            windDirTargetStat.Size = new System.Drawing.Size(26, 17);
+            windDirTargetStat.TabIndex = 15;
+            windDirTargetStat.Text = "0 0";
             // 
             // label20
             // 
-            label20.AutoSize = true;
-            label20.Location = new System.Drawing.Point(218, 9);
-            label20.Margin = new Padding(5, 0, 5, 0);
-            label20.Name = "label20";
-            label20.Padding = new Padding(2);
-            label20.Size = new System.Drawing.Size(118, 17);
-            label20.TabIndex = 14;
-            label20.Text = "Wind Direction Target:";
+            windDirTargetText.AutoSize = true;
+            windDirTargetText.Location = new System.Drawing.Point(218, 9);
+            windDirTargetText.Margin = new Padding(5, 0, 5, 0);
+            windDirTargetText.Name = "label20";
+            windDirTargetText.Padding = new Padding(2);
+            windDirTargetText.Size = new System.Drawing.Size(118, 17);
+            windDirTargetText.TabIndex = 14;
+            windDirTargetText.Text = "Wind Direction Target:";
             // 
             // lblStatSimTime
             // 
-            lblStatSimTime.AutoSize = true;
-            lblStatSimTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            lblStatSimTime.Location = new System.Drawing.Point(622, 26);
-            lblStatSimTime.Margin = new Padding(5, 0, 5, 0);
-            lblStatSimTime.Name = "lblStatSimTime";
-            lblStatSimTime.Padding = new Padding(2);
-            lblStatSimTime.Size = new System.Drawing.Size(33, 17);
-            lblStatSimTime.TabIndex = 13;
-            lblStatSimTime.Text = "0 ms";
+            simulationTimeStat.AutoSize = true;
+            simulationTimeStat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            simulationTimeStat.Location = new System.Drawing.Point(622, 26);
+            simulationTimeStat.Margin = new Padding(5, 0, 5, 0);
+            simulationTimeStat.Name = "lblStatSimTime";
+            simulationTimeStat.Padding = new Padding(2);
+            simulationTimeStat.Size = new System.Drawing.Size(33, 17);
+            simulationTimeStat.TabIndex = 13;
+            simulationTimeStat.Text = "0 ms";
             // 
             // label27
             // 
-            label27.AutoSize = true;
-            label27.Location = new System.Drawing.Point(522, 26);
-            label27.Margin = new Padding(5, 0, 5, 0);
-            label27.Name = "label27";
-            label27.Padding = new Padding(2);
-            label27.Size = new System.Drawing.Size(88, 17);
-            label27.TabIndex = 12;
-            label27.Text = "Simulation Time:";
+            simulationTimeLabel.AutoSize = true;
+            simulationTimeLabel.Location = new System.Drawing.Point(522, 26);
+            simulationTimeLabel.Margin = new Padding(5, 0, 5, 0);
+            simulationTimeLabel.Name = "label27";
+            simulationTimeLabel.Padding = new Padding(2);
+            simulationTimeLabel.Size = new System.Drawing.Size(88, 17);
+            simulationTimeLabel.TabIndex = 12;
+            simulationTimeLabel.Text = "Simulation Time:";
             // 
             // lblStatWindChange
             // 
-            lblStatWindChange.AutoSize = true;
-            lblStatWindChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            lblStatWindChange.Location = new System.Drawing.Point(352, 43);
-            lblStatWindChange.Margin = new Padding(5, 0, 5, 0);
-            lblStatWindChange.Name = "lblStatWindChange";
-            lblStatWindChange.Padding = new Padding(2);
-            lblStatWindChange.Size = new System.Drawing.Size(17, 17);
-            lblStatWindChange.TabIndex = 11;
-            lblStatWindChange.Text = "0";
+            nextWindChangeStat.AutoSize = true;
+            nextWindChangeStat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            nextWindChangeStat.Location = new System.Drawing.Point(352, 43);
+            nextWindChangeStat.Margin = new Padding(5, 0, 5, 0);
+            nextWindChangeStat.Name = "lblStatWindChange";
+            nextWindChangeStat.Padding = new Padding(2);
+            nextWindChangeStat.Size = new System.Drawing.Size(17, 17);
+            nextWindChangeStat.TabIndex = 11;
+            nextWindChangeStat.Text = "0";
             // 
             // label25
             // 
-            label25.AutoSize = true;
-            label25.Location = new System.Drawing.Point(218, 43);
-            label25.Margin = new Padding(5, 0, 5, 0);
-            label25.Name = "label25";
-            label25.Padding = new Padding(2);
-            label25.Size = new System.Drawing.Size(101, 17);
-            label25.TabIndex = 10;
-            label25.Text = "Next Wind Change";
+            nextWindChangeLabel.AutoSize = true;
+            nextWindChangeLabel.Location = new System.Drawing.Point(218, 43);
+            nextWindChangeLabel.Margin = new Padding(5, 0, 5, 0);
+            nextWindChangeLabel.Name = "label25";
+            nextWindChangeLabel.Padding = new Padding(2);
+            nextWindChangeLabel.Size = new System.Drawing.Size(101, 17);
+            nextWindChangeLabel.TabIndex = 10;
+            nextWindChangeLabel.Text = "Next Wind Change";
             // 
             // lblStatWindDir
             // 
-            lblStatWindDir.AutoSize = true;
-            lblStatWindDir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            lblStatWindDir.Location = new System.Drawing.Point(352, 26);
-            lblStatWindDir.Margin = new Padding(5, 0, 5, 0);
-            lblStatWindDir.Name = "lblStatWindDir";
-            lblStatWindDir.Padding = new Padding(2);
-            lblStatWindDir.Size = new System.Drawing.Size(26, 17);
-            lblStatWindDir.TabIndex = 9;
-            lblStatWindDir.Text = "0 0";
+            windDirStat.AutoSize = true;
+            windDirStat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            windDirStat.Location = new System.Drawing.Point(352, 26);
+            windDirStat.Margin = new Padding(5, 0, 5, 0);
+            windDirStat.Name = "lblStatWindDir";
+            windDirStat.Padding = new Padding(2);
+            windDirStat.Size = new System.Drawing.Size(26, 17);
+            windDirStat.TabIndex = 9;
+            windDirStat.Text = "0 0";
             // 
             // label23
             // 
-            label23.AutoSize = true;
-            label23.Location = new System.Drawing.Point(218, 26);
-            label23.Margin = new Padding(5, 0, 5, 0);
-            label23.Name = "label23";
-            label23.Padding = new Padding(2);
-            label23.Size = new System.Drawing.Size(84, 17);
-            label23.TabIndex = 8;
-            label23.Text = "Wind Direction:";
+            windDirText.AutoSize = true;
+            windDirText.Location = new System.Drawing.Point(218, 26);
+            windDirText.Margin = new Padding(5, 0, 5, 0);
+            windDirText.Name = "label23";
+            windDirText.Padding = new Padding(2);
+            windDirText.Size = new System.Drawing.Size(84, 17);
+            windDirText.TabIndex = 8;
+            windDirText.Text = "Wind Direction:";
             // 
             // lblStatTicks
             // 
-            lblStatTicks.AutoSize = true;
-            lblStatTicks.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            lblStatTicks.Location = new System.Drawing.Point(622, 9);
-            lblStatTicks.Margin = new Padding(5, 0, 5, 0);
-            lblStatTicks.Name = "lblStatTicks";
-            lblStatTicks.Padding = new Padding(2);
-            lblStatTicks.Size = new System.Drawing.Size(17, 17);
-            lblStatTicks.TabIndex = 7;
-            lblStatTicks.Text = "0";
+            ticksCount.AutoSize = true;
+            ticksCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            ticksCount.Location = new System.Drawing.Point(622, 9);
+            ticksCount.Margin = new Padding(5, 0, 5, 0);
+            ticksCount.Name = "lblStatTicks";
+            ticksCount.Padding = new Padding(2);
+            ticksCount.Size = new System.Drawing.Size(17, 17);
+            ticksCount.TabIndex = 7;
+            ticksCount.Text = "0";
             // 
             // label21
             // 
-            label21.AutoSize = true;
-            label21.Location = new System.Drawing.Point(522, 9);
-            label21.Margin = new Padding(5, 0, 5, 0);
-            label21.Name = "label21";
-            label21.Padding = new Padding(2);
-            label21.Size = new System.Drawing.Size(40, 17);
-            label21.TabIndex = 6;
-            label21.Text = "Ticks:";
+            ticksText.AutoSize = true;
+            ticksText.Location = new System.Drawing.Point(522, 9);
+            ticksText.Margin = new Padding(5, 0, 5, 0);
+            ticksText.Name = "label21";
+            ticksText.Padding = new Padding(2);
+            ticksText.Size = new System.Drawing.Size(40, 17);
+            ticksText.TabIndex = 6;
+            ticksText.Text = "Ticks:";
             // 
             // lblStatActive
             // 
-            lblStatActive.AutoSize = true;
-            lblStatActive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            lblStatActive.Location = new System.Drawing.Point(126, 43);
-            lblStatActive.Margin = new Padding(5, 0, 5, 0);
-            lblStatActive.Name = "lblStatActive";
-            lblStatActive.Padding = new Padding(2);
-            lblStatActive.Size = new System.Drawing.Size(17, 17);
-            lblStatActive.TabIndex = 5;
-            lblStatActive.Text = "0";
+            activeAgentsCount.AutoSize = true;
+            activeAgentsCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            activeAgentsCount.Location = new System.Drawing.Point(126, 43);
+            activeAgentsCount.Margin = new Padding(5, 0, 5, 0);
+            activeAgentsCount.Name = "lblStatActive";
+            activeAgentsCount.Padding = new Padding(2);
+            activeAgentsCount.Size = new System.Drawing.Size(17, 17);
+            activeAgentsCount.TabIndex = 5;
+            activeAgentsCount.Text = "0";
             // 
             // label19
             // 
-            label19.AutoSize = true;
-            label19.Location = new System.Drawing.Point(10, 43);
-            label19.Margin = new Padding(5, 0, 5, 0);
-            label19.Name = "label19";
-            label19.Padding = new Padding(2);
-            label19.Size = new System.Drawing.Size(80, 17);
-            label19.TabIndex = 4;
-            label19.Text = "Active Agents:";
+            activeAgentsLabel.AutoSize = true;
+            activeAgentsLabel.Location = new System.Drawing.Point(10, 43);
+            activeAgentsLabel.Margin = new Padding(5, 0, 5, 0);
+            activeAgentsLabel.Name = "label19";
+            activeAgentsLabel.Padding = new Padding(2);
+            activeAgentsLabel.Size = new System.Drawing.Size(80, 17);
+            activeAgentsLabel.TabIndex = 4;
+            activeAgentsLabel.Text = "Active Agents:";
             // 
             // lblStatInactive
             // 
-            lblStatInactive.AutoSize = true;
-            lblStatInactive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            lblStatInactive.Location = new System.Drawing.Point(126, 26);
-            lblStatInactive.Margin = new Padding(5, 0, 5, 0);
-            lblStatInactive.Name = "lblStatInactive";
-            lblStatInactive.Padding = new Padding(2);
-            lblStatInactive.Size = new System.Drawing.Size(17, 17);
-            lblStatInactive.TabIndex = 3;
-            lblStatInactive.Text = "0";
+            inactiveAgentsCount.AutoSize = true;
+            inactiveAgentsCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            inactiveAgentsCount.Location = new System.Drawing.Point(126, 26);
+            inactiveAgentsCount.Margin = new Padding(5, 0, 5, 0);
+            inactiveAgentsCount.Name = "lblStatInactive";
+            inactiveAgentsCount.Padding = new Padding(2);
+            inactiveAgentsCount.Size = new System.Drawing.Size(17, 17);
+            inactiveAgentsCount.TabIndex = 3;
+            inactiveAgentsCount.Text = "0";
             // 
             // label17
             // 
-            label17.AutoSize = true;
-            label17.Location = new System.Drawing.Point(10, 26);
-            label17.Margin = new Padding(5, 0, 5, 0);
-            label17.Name = "label17";
-            label17.Padding = new Padding(2);
-            label17.Size = new System.Drawing.Size(88, 17);
-            label17.TabIndex = 2;
-            label17.Text = "Inactive Agents:";
+            inactiveAgentsLabel.AutoSize = true;
+            inactiveAgentsLabel.Location = new System.Drawing.Point(10, 26);
+            inactiveAgentsLabel.Margin = new Padding(5, 0, 5, 0);
+            inactiveAgentsLabel.Name = "label17";
+            inactiveAgentsLabel.Padding = new Padding(2);
+            inactiveAgentsLabel.Size = new System.Drawing.Size(88, 17);
+            inactiveAgentsLabel.TabIndex = 2;
+            inactiveAgentsLabel.Text = "Inactive Agents:";
             // 
             // lblStatTotalAgents
             // 
-            lblStatTotalAgents.AutoSize = true;
-            lblStatTotalAgents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            lblStatTotalAgents.Location = new System.Drawing.Point(126, 9);
-            lblStatTotalAgents.Margin = new Padding(5, 0, 5, 0);
-            lblStatTotalAgents.Name = "lblStatTotalAgents";
-            lblStatTotalAgents.Padding = new Padding(2);
-            lblStatTotalAgents.Size = new System.Drawing.Size(17, 17);
-            lblStatTotalAgents.TabIndex = 1;
-            lblStatTotalAgents.Text = "0";
+            totalAgentsCount.AutoSize = true;
+            totalAgentsCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            totalAgentsCount.Location = new System.Drawing.Point(126, 9);
+            totalAgentsCount.Margin = new Padding(5, 0, 5, 0);
+            totalAgentsCount.Name = "lblStatTotalAgents";
+            totalAgentsCount.Padding = new Padding(2);
+            totalAgentsCount.Size = new System.Drawing.Size(17, 17);
+            totalAgentsCount.TabIndex = 1;
+            totalAgentsCount.Text = "0";
             // 
             // label16
             // 
-            label16.AutoSize = true;
-            label16.Location = new System.Drawing.Point(9, 9);
-            label16.Margin = new Padding(5, 0, 5, 0);
-            label16.Name = "label16";
-            label16.Padding = new Padding(2);
-            label16.Size = new System.Drawing.Size(74, 17);
-            label16.TabIndex = 0;
-            label16.Text = "Total Agents:";
+            totalAgentsLabel.AutoSize = true;
+            totalAgentsLabel.Location = new System.Drawing.Point(9, 9);
+            totalAgentsLabel.Margin = new Padding(5, 0, 5, 0);
+            totalAgentsLabel.Name = "label16";
+            totalAgentsLabel.Padding = new Padding(2);
+            totalAgentsLabel.Size = new System.Drawing.Size(74, 17);
+            totalAgentsLabel.TabIndex = 0;
+            totalAgentsLabel.Text = "Total Agents:";
             // 
             // tabPage3
             // 
@@ -1887,60 +1887,60 @@ namespace WalkerSim.Editor
             // 
             // btZoomIn
             // 
-            btZoomIn.BackColor = System.Drawing.Color.Black;
-            btZoomIn.BorderStyle = BorderStyle.FixedSingle;
-            btZoomIn.FlatStyle = FlatStyle.Flat;
-            btZoomIn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btZoomIn.ForeColor = System.Drawing.Color.White;
-            btZoomIn.Location = new System.Drawing.Point(35, 35);
-            btZoomIn.Margin = new Padding(0);
-            btZoomIn.Name = "btZoomIn";
-            btZoomIn.Size = new System.Drawing.Size(22, 22);
-            btZoomIn.TabIndex = 7;
-            btZoomIn.Text = "+";
-            btZoomIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            btZoomIn.Click += new System.EventHandler(OnZoomInClick);
+            zoomInBtn.BackColor = System.Drawing.Color.Black;
+            zoomInBtn.BorderStyle = BorderStyle.FixedSingle;
+            zoomInBtn.FlatStyle = FlatStyle.Flat;
+            zoomInBtn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            zoomInBtn.ForeColor = System.Drawing.Color.White;
+            zoomInBtn.Location = new System.Drawing.Point(35, 35);
+            zoomInBtn.Margin = new Padding(0);
+            zoomInBtn.Name = "btZoomIn";
+            zoomInBtn.Size = new System.Drawing.Size(22, 22);
+            zoomInBtn.TabIndex = 7;
+            zoomInBtn.Text = "+";
+            zoomInBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            zoomInBtn.Click += new System.EventHandler(OnZoomInClick);
             // 
             // btZoomOut
             // 
-            btZoomOut.BackColor = System.Drawing.Color.Black;
-            btZoomOut.BorderStyle = BorderStyle.FixedSingle;
-            btZoomOut.FlatStyle = FlatStyle.Flat;
-            btZoomOut.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btZoomOut.ForeColor = System.Drawing.Color.White;
-            btZoomOut.Location = new System.Drawing.Point(10, 35);
-            btZoomOut.Margin = new Padding(0);
-            btZoomOut.Name = "btZoomOut";
-            btZoomOut.Size = new System.Drawing.Size(22, 22);
-            btZoomOut.TabIndex = 8;
-            btZoomOut.Text = "-";
-            btZoomOut.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            btZoomOut.Click += new System.EventHandler(OnZoomOutClick);
+            zoomOutBtn.BackColor = System.Drawing.Color.Black;
+            zoomOutBtn.BorderStyle = BorderStyle.FixedSingle;
+            zoomOutBtn.FlatStyle = FlatStyle.Flat;
+            zoomOutBtn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            zoomOutBtn.ForeColor = System.Drawing.Color.White;
+            zoomOutBtn.Location = new System.Drawing.Point(10, 35);
+            zoomOutBtn.Margin = new Padding(0);
+            zoomOutBtn.Name = "btZoomOut";
+            zoomOutBtn.Size = new System.Drawing.Size(22, 22);
+            zoomOutBtn.TabIndex = 8;
+            zoomOutBtn.Text = "-";
+            zoomOutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            zoomOutBtn.Click += new System.EventHandler(OnZoomOutClick);
             // 
             // label29
             // 
-            label29.BackColor = System.Drawing.Color.Black;
-            label29.BorderStyle = BorderStyle.FixedSingle;
-            label29.FlatStyle = FlatStyle.Flat;
-            label29.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label29.ForeColor = System.Drawing.Color.White;
-            label29.Location = new System.Drawing.Point(60, 35);
-            label29.Margin = new Padding(0);
-            label29.Name = "label29";
-            label29.Size = new System.Drawing.Size(22, 22);
-            label29.TabIndex = 9;
-            label29.Text = "R";
-            label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            label29.Click += new System.EventHandler(OnZoomResetClick);
+            zoomResetBtn.BackColor = System.Drawing.Color.Black;
+            zoomResetBtn.BorderStyle = BorderStyle.FixedSingle;
+            zoomResetBtn.FlatStyle = FlatStyle.Flat;
+            zoomResetBtn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            zoomResetBtn.ForeColor = System.Drawing.Color.White;
+            zoomResetBtn.Location = new System.Drawing.Point(60, 35);
+            zoomResetBtn.Margin = new Padding(0);
+            zoomResetBtn.Name = "label29";
+            zoomResetBtn.Size = new System.Drawing.Size(22, 22);
+            zoomResetBtn.TabIndex = 9;
+            zoomResetBtn.Text = "R";
+            zoomResetBtn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            zoomResetBtn.Click += new System.EventHandler(OnZoomResetClick);
             // 
             // FormMain
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(840, 716);
-            Controls.Add(label29);
-            Controls.Add(btZoomOut);
-            Controls.Add(btZoomIn);
+            Controls.Add(zoomResetBtn);
+            Controls.Add(zoomOutBtn);
+            Controls.Add(zoomInBtn);
             Controls.Add(splitContainer1);
             Controls.Add(menuStrip1);
             DoubleBuffered = true;
@@ -1960,8 +1960,8 @@ namespace WalkerSim.Editor
             splitContainer1.ResumeLayout(false);
             ((ISupportInitialize)(simCanvas)).EndInit();
             tabSimulation.ResumeLayout(false);
-            tabPage1.ResumeLayout(false);
-            tabPage1.PerformLayout();
+            baseParametersTab.ResumeLayout(false);
+            baseParametersTab.PerformLayout();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             ((ISupportInitialize)(inputSpawnProtectionTime)).EndInit();
@@ -1972,9 +1972,9 @@ namespace WalkerSim.Editor
             ((ISupportInitialize)(inputMaxAgents)).EndInit();
             ((ISupportInitialize)(inputActivationRadius)).EndInit();
             ((ISupportInitialize)(inputSoundDistanceScale)).EndInit();
-            tabPage2.ResumeLayout(false);
+            movementSystemsTab.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
-            groupBox1.ResumeLayout(false);
+            systemsGroupBox1.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
             groupProcessors.ResumeLayout(false);
@@ -1992,8 +1992,8 @@ namespace WalkerSim.Editor
             panel2.ResumeLayout(false);
             ((ISupportInitialize)(boxGroupColor)).EndInit();
             ((ISupportInitialize)(inputMovementSpeed)).EndInit();
-            tabPage4.ResumeLayout(false);
-            tabPage4.PerformLayout();
+            statisticsTab.ResumeLayout(false);
+            statisticsTab.PerformLayout();
             tabPage3.ResumeLayout(false);
             contextLog.ResumeLayout(false);
             ResumeLayout(false);
@@ -2020,8 +2020,8 @@ namespace WalkerSim.Editor
         private ToolStripMenuItem viewEvents;
         private SplitContainer splitContainer1;
         private TabControl tabSimulation;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
+        private TabPage baseParametersTab;
+        private TabPage movementSystemsTab;
         private CheckBox inputPauseDuringBloodmoon;
         private ComboBox inputRespawnPosition;
         private LabelWithHelp lblRespawnPosition;
@@ -2034,9 +2034,9 @@ namespace WalkerSim.Editor
         private CheckBox inputStartGrouped;
         private GroupBox groupProps;
         private NumericUpDown inputMovementSpeed;
-        private LabelWithHelp lblMovementSpeed;
+        private LabelWithHelp movementSpeedText;
         private ComboBox inputWorld;
-        private Label label10;
+        private Label worldLabel;
         private ToolStripMenuItem speedToolStripMenuItem;
         private ToolStripMenuItem killToolStripMenuItem;
         private ToolStripMenuItem loadConfigurationToolStripMenuItem;
@@ -2049,14 +2049,14 @@ namespace WalkerSim.Editor
         private ContextMenuStrip contextLog;
         private ToolStripMenuItem clearToolStripMenuItem;
         private ToolStripMenuItem copyToolStripMenuItem;
-        private LabelWithHelp lblGroupColor;
+        private LabelWithHelp groupColorLabel;
         private PictureBox boxGroupColor;
         private Button buttonGroupColor;
         private ColorDialog colorPickerDlg;
         private ToolStripMenuItem exportConfigurationToolStripMenuItem;
-        private Button btRand;
+        private Button randomSeedBtn;
         private ToolTip toolTipGroupSize;
-        private Label lblAffected;
+        private Label affectedAgentsLabel;
         private ToolStripMenuItem viewPrefabs;
         private CheckBox inputFastForward;
         private LabelWithHelp lblSpawnProtectionTime;
@@ -2068,7 +2068,7 @@ namespace WalkerSim.Editor
         private LabelWithHelp lblStartAgentsGrouped;
         private LabelWithHelp lblFastForward;
         private NumericUpDown inputMaxAgents;
-        private LabelWithHelp lblPostSpawnBehavior;
+        private LabelWithHelp postSpawnBehaviorLabel;
         private ComboBox inputPostSpawnBehavior;
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem addPlayerToolStripMenuItem;
@@ -2081,27 +2081,27 @@ namespace WalkerSim.Editor
         private ToolStripMenuItem inToolStripMenuItem;
         private ToolStripMenuItem outToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator3;
-        private TabPage tabPage4;
-        private Label lblStatTotalAgents;
-        private Label label16;
-        private Label lblStatActive;
-        private Label label19;
-        private Label lblStatInactive;
-        private Label label17;
-        private Label lblStatSimTime;
-        private Label label27;
-        private Label lblStatWindChange;
-        private Label label25;
-        private Label lblStatWindDir;
-        private Label label23;
-        private Label lblStatTicks;
-        private Label label21;
-        private Label lblStatWindTarget;
-        private Label label20;
-        private Label lblStatUpdateTime;
-        private Label label22;
-        private Label lblStatGroups;
-        private Label label24;
+        private TabPage statisticsTab;
+        private Label totalAgentsCount;
+        private Label totalAgentsLabel;
+        private Label activeAgentsCount;
+        private Label activeAgentsLabel;
+        private Label inactiveAgentsCount;
+        private Label inactiveAgentsLabel;
+        private Label simulationTimeStat;
+        private Label simulationTimeLabel;
+        private Label nextWindChangeStat;
+        private Label nextWindChangeLabel;
+        private Label windDirStat;
+        private Label windDirText;
+        private Label ticksCount;
+        private Label ticksText;
+        private Label windDirTargetStat;
+        private Label windDirTargetText;
+        private Label updateTimeStat;
+        private Label updateTimeText;
+        private Label groupsStat;
+        private Label groupsLabel;
         private LabelWithHelp lblActivationRadius;
         private NumericUpDown inputActivationRadius;
         private ToolStripMenuItem loadStateSaveToolStripMenuItem;
@@ -2115,9 +2115,9 @@ namespace WalkerSim.Editor
         private LabelWithHelp lblPostSpawnWanderSpeed;
         private ListBox listProcessorGroups;
         private Button buttonDuplicateGroup;
-        private GroupBox groupBox1;
+        private GroupBox systemsGroupBox1;
         private Button buttonRemoveGroup;
-        private Button button1;
+        private Button addGroupBtn;
         private TableLayoutPanel tableLayoutPanel2;
         private TableLayoutPanel tableLayoutPanel3;
         private TableLayoutPanel tableLayoutPanel4;
@@ -2128,19 +2128,19 @@ namespace WalkerSim.Editor
         private TableLayoutPanel tableLayoutPanel6;
         private TableLayoutPanel tableLayoutPanel7;
         private TableLayoutPanel tableLayoutPanel8;
-        private Button button4;
+        private Button addMovementProcessorBtn;
         private Button buttonRemoveProcessor;
         private ListBox listProcessors;
         private GroupBox groupParameter;
         private TableLayoutPanel tableLayoutPanel9;
         private NumericUpDown inputProcessorPower;
         private Label label9;
-        private Label label8;
+        private Label powerLabel;
         private NumericUpDown inputProcessorDistance;
-        private Label btZoomIn;
-        private Label btZoomOut;
-        private Label label29;
-        private LabelWithHelp lblAffectedGroup;
+        private Label zoomInBtn;
+        private Label zoomOutBtn;
+        private Label zoomResetBtn;
+        private LabelWithHelp affectedGroupLabel;
         private ToolStripMenuItem helpToolStripMenuItem;
         private ToolStripMenuItem documentationToolStripMenuItem;
         private LabelWithHelp labelWithHelp1;
